@@ -65,12 +65,12 @@ const Board = () => {
                 newGrid[ monster.y ][ monster.x ].type = '.';
                 monster.y--; 
 
-            } else if( monster. x < player.x ) {
+            } else if( monster.x < player.x ) {
 
                 newGrid[ monster.y ][ monster.x ].type = '.';
                 monster.x++; 
 
-            } else if( monster. x > player.x ) {
+            } else if( monster.x > player.x ) {
 
                 newGrid[ monster.y ][ monster.x ].type = '.';
                 monster.x--; 
@@ -108,7 +108,7 @@ const Board = () => {
 
     };
 
-    useEffect(  () => {
+    useEffect( () => {
 
         document.addEventListener("keydown", keyHandler, false);
     
@@ -134,7 +134,7 @@ const Board = () => {
                         case '.': color = 'gray'; break;
                     }
 
-                    return cell.x < 19 ? <span style={{ color }}>{ cell.type }</span> : <br /> 
+                    return <span style={{ color }}>{ cell.type }</span>;
                 }) 
                 }</div>
             ) }
